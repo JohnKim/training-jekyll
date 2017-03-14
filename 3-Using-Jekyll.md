@@ -138,11 +138,6 @@ fruit:
 ---
 
 <h1> This is Sample Page </h1>
-<ul>
-  {% for item in page.fruit %}
-    <li>{{ item.name }}, cost: {{ item.cost }}, color: {{ item.color }}</li>
-  {% endfor %}
-</ul>
 
 ```
 
