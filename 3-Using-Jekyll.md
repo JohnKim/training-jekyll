@@ -67,9 +67,7 @@ fruit:
 
 그리고 HTML 중에 Liquid 템플릿 문법을 사용하였으며, Jekyll 이 이 파일을 빌드하여 HTML 로 변환하게 될 것입니다. index.html 은 HTML 과 함께 Liquid 템플릿 문법을 사용하여 작성하였으므로, 통상적으로 HTML 이라고 부르기보다는 템플릿 파일이라고 부릅니다.
 
-Liquid 문법은 지정하는 변수를 보여주는` {{ 변수 }}` 와 로직을 넣을 수 있는 `{% 로직 문 %}` 이 있습니다. 
-
-
+Liquid 문법은 지정하는 변수를 보여주는`{{ 변수 }}` 와 로직을 넣을 수 있는 `{% 로직 문 %}` 이 있습니다.
 
 ### 2. Layouts
 
@@ -161,13 +159,23 @@ Layout 은 페이지의 틀이나 배경이라고 한다면, Include 는 공통�
 </div>
 ```
 
-이렇게 작성한 include 파일은 여러가지 템플릿 페이지에서 사용할 수 있습니다. 위의 예제와 같이 특정 변수를 넘길수도 있습니다. 위의 include 파일을 앞에 만든 `index.html` 에서 사용하도록 해봅시다.
+이렇게 작성한 include 파일은 여러가지 템플릿 페이지에서 사용할 수 있습니다. 위의 예제와 같이 특정 변수를 넘길수도 있습니다. 위의 include 파일을 앞에 만든 `index.html` 에 원하는 위치에 아래 코드를 넣어 보조록 합니다.
 
 ```
-{% include youtube.html youtube_id="YIiHiMXOeYU" %}
+{% include youtube.html youtube_id="8A2t_tAjMz8" %}
 ```
+
+이 코드는 include 하면서 youtube_id 라는 변수를 설정하는 예시이며, _`include/youtube.html`_ 에서는 이 변수를 사용할 수 있습니다._
 
 ### 4. Post
 
-블로그 . . .
+마지막으로는 문서 \(또는 글\)를 작성하고 이를 목록으로 보여주는 부분을 실습하도록 하겠습니다.
+
+먼저 \_posts/2017-03-17-welcome-to-jekyll.md
+
+```
+
+```
+
+
 
