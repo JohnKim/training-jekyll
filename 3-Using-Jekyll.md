@@ -61,7 +61,7 @@ fruit:
 └── index.html
 ```
 
-이제 [http://localhost:4000](http://localhost:4000) 에 접속하면 \_site/index.html 를 볼 수 있습니다.
+이제 [http://localhost:4000](http://localhost:4000) 에 접속하면 `_site/index.html` 의 내요을 웹브라우저에서 볼 수 있습니다.
 
 `index.html` 의 최상단 앞뒤에 `---` 로 구분되어 있는 영역을 Front Matter, 즉 머릿말 이라고 합니다. 여기에 파일에서 사용할 변수와 데이터를 정의할 수 있습니다.
 
@@ -115,12 +115,12 @@ Layout 을 미리 개발해 놓은 후 각 웹페이지들을 개발하게 되�
 </html>
 ```
 
-이 layout 파일을 사용하는 템플릿 페이지의 내용은 Jekyll 을 통해 빌드될때 {{ content }} 영역에 들어가 HTML 이 생성될 것입니다.   
+이 layout 파일을 사용하는 템플릿 페이지의 내용은 Jekyll 을 통해 빌드될때 `{{ content }}` 영역에 들어가 HTML 이 생성될 것입니다.   
 그리고 layout 에서 템플릿 파일에 Front Matter 에 정의한 변수를 가져다 사용할 수도 있습니다.
 
 이제 이 layout 을 사용하는 템플릿파일을 만들어 봅니다.
 
-`index.html` 는 앞에서 작성한 파일에서 Header 와 Footer 를 삭제합니다. \(Layout 에 구현했기 때문\) 그리고 FrontMatter 로 title 변수를 설정하여 Layout 에서 사용할 수 있도록 합니다.
+Header 와 Footer 영역은 앞에 layout 에서 구현하였으므로, `index.html` 에서는 Header 와 Footer 에 대한 코드를 삭제합니다. 그리고 Front Matter 로 title 변수를 설정하여 layout 에서 사용할 수 있도록 합니다.
 
 ```
 ---
@@ -152,7 +152,6 @@ fruit:
 `_site` 폴더 안의 파일 내용을 통해 확인해 보도록 합니다.
 
 
-
 ### 3. Includes
 
 Layout 은 페이지의 틀이나 배경이라고 한다면, Include 는 공통으로 사용될만한 영역을 별도로 분리해 놓는 것입니다. 다른 템플릿 엔진에서는 partial \(공통으로 사용되는 일부분이라는 의미로 사용\) 이라고 부르기도 합니다.
@@ -167,4 +166,13 @@ Layout 은 페이지의 틀이나 배경이라고 한다면, Include 는 공통�
 </div>
 ```
 
-이렇게 작성한 include 파일은 여러가지 템플릿 페이지에서 사용할 수 있습니다. 위의 예제와 같이 특정 변수를 넘길수도 있으며, 이 변수를 Include
+이렇게 작성한 include 파일은 여러가지 템플릿 페이지에서 사용할 수 있습니다. 위의 예제와 같이 특정 변수를 넘길수도 있습니다. 위의 include 파일을 앞에 만든 `index.html` 에서 사용하도록 해봅시다.
+
+```
+{% include youtube.html youtube_id="YIiHiMXOeYU" %}
+```
+
+
+### 4. Post
+
+블로그 . . .
