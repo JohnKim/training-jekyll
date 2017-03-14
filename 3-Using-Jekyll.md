@@ -71,7 +71,6 @@ Liquid 문법은 2가지를 사용하고 있습니다.
 
 1. 지정된 변수 값을 보여주도록 하는 `{{ variable }}`
    현재 페이지의 변호는 `page.` 로 시작하도록 prefix 를 붙혀야 합니다.
-
 2. 로직을 작성할 수 있는`{% if statement %} `  
 
 ### 2. Layouts
@@ -169,10 +168,8 @@ Layout 은 페이지의 틀이나 배경이라고 한다면, Include 는 공통�
 이렇게 작성한 include 파일은 여러가지 템플릿 페이지에서 사용할 수 있습니다. 위의 예제와 같이 특정 변수를 넘길수도 있습니다. 위의 include 파일을 앞에 만든 `index.html` 에서 사용하도록 해봅시다.
 
 ```
-{% include youtube.html youtube_id="YIiHiMXOeYU" %}
+ss
 ```
 
 
 ### 4. Post
-
-블로그 . . .
