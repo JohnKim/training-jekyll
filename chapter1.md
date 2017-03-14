@@ -7,9 +7,7 @@
 > &lt;kakao 기술 블로그가 GitHub Pages \(그리고 Jekyll\) 로 간 까닭은&gt;  
 > [http://tech.kakao.com/2016/07/07/tech-blog-story/](https://www.gitbook.com/book/john-kim/training-jekyll/edit#)
 
-
-
-Jekyll은 static site generator 중 하나입니다.   
+Jekyll은 static site generator 중 하나입니다.  
 템플릿 파일과 Markdown 기반의 문서 파일을 읽어들여 랜더링 과정을 통해 웹페이지로 변환시켜줍니다.
 
 \(그림\) …
@@ -29,6 +27,8 @@ Liquid \([https://shopify.github.io/liquid](https://shopify.github.io/liquid/)\)
 Github 의 Github Pages 는 Jekyll 를 사용하는 프로젝트 리파지토리를 웹사이트로 동작하도록 하는 서비스를 제공하고 있으며, 이를 Github Pages 라고 합니다. Github Pages 를 사용하게 되면, 직접 웹서버를 설치하지 않고 Jekyll 기반의 프로젝트 저장소를 생성하는것 만으로도 웹서비스가 가능합니다.
 
 \(그림\)
+
+
 
 &gt;
 
