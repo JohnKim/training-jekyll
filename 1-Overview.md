@@ -1,6 +1,5 @@
-# Jekyll 이란 무엇인가요?
+# Jekyll에 대한 설명
 
-### 
 
 > ### **기술 블로그 만의 Geek스러움이 부족했습니다. 그래서… 바꿨습니다!**
 >
@@ -54,11 +53,11 @@ Dynamic CMS
 
 static site generator 중에 Jekyll 이외에도, 아래와 같은 도구도 많이 사용됩니다.
 
-* photo gallery websites 
+* photo gallery websites
 
 [https://github.com/Jack000/Expose](https://github.com/Jack000/Expose)
 
-* documentation website 
+* documentation website
 
 [https://www.gitbook.com/](https://www.gitbook.com/)
 
@@ -79,4 +78,3 @@ Scalability
 그외에도, 전체적인 아키텍처가 간단하여 관리가 쉽고, 보안을 위해 고려해야할 부분도 적습니다.
 
 장점만 있는 것은 아닙니다. 작성되는 글을 실시간으로 서비스에 반영할 수 있는 일반적은 CMS 와 달리, 새로은 글을 작성하거나 수정할 경우 다시 변환해주어야만 합니다. 다만, 많은 글쓴이가 수시로 작성해야 하는 웹서비스가 아니라면, 큰 문제가 되지 않을 수 있습니다.
-
