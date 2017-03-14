@@ -1,6 +1,6 @@
 # Jekyll 이란 무엇인가요?
 
-
+### 
 
 > ### **기술 블로그 만의 Geek스러움이 부족했습니다. 그래서… 바꿨습니다!**
 >
@@ -9,7 +9,8 @@
 
 
 
-Jekyll은 static site generator 중 하나입니다. 템플릿 파일과 Markdown 기반의 문서 파일을 읽어들여 랜더링 과정을 통해 웹페이지로 변환시켜줍니다.
+Jekyll은 static site generator 중 하나입니다.   
+템플릿 파일과 Markdown 기반의 문서 파일을 읽어들여 랜더링 과정을 통해 웹페이지로 변환시켜줍니다.
 
 \(그림\) …
 
@@ -17,27 +18,15 @@ Jekyll은 static site generator 중 하나입니다. 템플릿 파일과 Markdow
 
 …
 
-Liquid \(
-
-[https://shopify.github.io/liquid](https://shopify.github.io/liquid/)
-
-\) 는 Ruby 로 만들어진 가장 많이 사용되고 있는 템플릿 언어와 엔진으로 가장 많이 사용되고 있으며, Jekyll 에서 사용되고 있습니다.
+Liquid \([https://shopify.github.io/liquid](https://shopify.github.io/liquid/)\) 는 Ruby 로 만들어진 가장 많이 사용되고 있는 템플릿 언어와 엔진으로 가장 많이 사용되고 있으며, Jekyll 에서 랜더링하는데 사용되고 있습니다.
 
 [https://subicura.com/assets/article\_images/2016-06-20-server-side-rendering-with-react/template-engine.png](https://subicura.com/assets/article_images/2016-06-20-server-side-rendering-with-react/template-engine.png)
 
-변환된 static files \(HTML, CSS, JS\) 를 Nginx\(
-
-[https://nginx.or](https://nginx.org)
-
-g\)나 Apache\(
-
-[https://httpd.apache.org](https://httpd.apache.org/)
-
-\)와 같은 웹서버를 통해 서비스하게 됩니다.
+변환된 static files \(HTML, CSS, JS\) 를 Nginx\([https://nginx.or](https://nginx.org)g\)나 Apache\([https://httpd.apache.org](https://httpd.apache.org/)\)와 같은 웹서버를 통해 서비스하게 됩니다.
 
 \(그림\)
 
-Github 은 Jekyll 를 사용하는 프로젝트 리파지토리를 웹사이트로 동작하도록 하는 서비스를 제공하고 있으며, 이를 Github Pages 라고 합니다. Github Pages 를 사용하게 되면, 직접 웹서버를 설치하지 않고 Jekyll 기반의 프로젝트 저장소를 생성하는것 만으로도 웹서비스가 가능합니다.
+Github 의 Github Pages 는 Jekyll 를 사용하는 프로젝트 리파지토리를 웹사이트로 동작하도록 하는 서비스를 제공하고 있으며, 이를 Github Pages 라고 합니다. Github Pages 를 사용하게 되면, 직접 웹서버를 설치하지 않고 Jekyll 기반의 프로젝트 저장소를 생성하는것 만으로도 웹서비스가 가능합니다.
 
 \(그림\)
 
