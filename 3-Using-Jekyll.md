@@ -67,12 +67,7 @@ fruit:
 
 그리고 HTML 중에 Liquid 템플릿 문법을 사용하였으며, Jekyll 이 이 파일을 빌드하여 HTML 로 변환하게 될 것입니다. index.html 은 HTML 과 함께 Liquid 템플릿 문법을 사용하여 작성하였으므로, 통상적으로 HTML 이라고 부르기보다는 템플릿 파일이라고 부릅니다.
 
-Liquid 문법은 2가지를 사용하고 있습니다.
-
-* 지정된 변수 값을 보여주도록 하는 `{{ variable }}`  
-  현재 페이지의 변호는 `page.` 로 시작하도록 prefix 를 붙혀야 합니다.
-
-* 로직을 작성할 수 있는`{% if statement %}`
+Liquid 문법은 지저
 
 ### 2. Layouts
 
