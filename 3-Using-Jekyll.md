@@ -176,28 +176,57 @@ Layout 은 페이지의 틀이나 배경이라고 한다면, Include 는 공통�
 먼저 `_posts/2017-03-17-welcome-to-jekyll.md` 파일을 아래와 같이 생성하고, Markdown 문법으로 글을 작성합니다.
 
 ```
+---
+layout: default
+---
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Maecenas at tellus sed erat egestas dictum sed ac enim. 
+Fusce sollicitudin turpis nec urna egestas pellentesque. 
+Suspendisse ultricies ex vitae dui tempus dignissim. 
+Morbi sit amet dui molestie, aliquam urna id, rhoncus tellus. 
+Aliquam venenatis a velit in scelerisque. 
+Donec orci felis, feugiat eget ex sed, convallis sollicitudin dui. 
+Proin ut nisl vestibulum, vestibulum sapien non, lobortis velit. 
+Sed sodales, lorem et vulputate dignissim, felis dolor lobortis leo, id pretium magna libero non orci. 
+Morbi interdum augue tellus, vel gravida sapien euismod vitae. 
+
+{% include youtube.html youtube_id="8A2t_tAjMz8" %}
 ```
 
 파일명은 일반적으로 생성\(발행\) 일자와 제목으로 만들게 됩니다.
 
-그리고, `_posts/2017-03-17-resume.md` 파일을 하나더 만들어 이전 실습 시간에 작성했던 resume 내용을 작성합니다.
+그리고, `_posts/2017-03-17-sample.md` 파일을 하나더 만들어 글을 작성해 봅니다. 
 
 현재 두건의 글을 작성하였고 글 목록을 보여주는 페이지를 만들어 보도록 합니다.
 
 `posts.html` 파일을 아래와 같이 작성합니다.
 
 ```
+---
+layout: default
+title: Blog Page
+---
+<ul>
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 
 ```
 
-`_site` 폴더 안의 구조를 보면, 작성한 파일들이 일자별 폴더와 함께 생성된 것을 확인할 수 있습니다. 
+Jekyll 은 \_posts 폴더의 모든 파일 목록을 site.posts 를 통해 배열로 받아 사용할 수 있습니다.
+
+`_site` 폴더 안의 구조를 보면, 작성한 파일들이 일자별 폴더와 함께 생성된 것을 확인할 수 있습니다.
 
 ```
 tree
 ```
 
 
+
+> 샘플로 만든  'Lorem ipsum dolor sit amet...' 문장은 사실상 특별한 의미가 없는 문장으로, 다양한 문자가 섞여 있고 문자의 조합에서 글자의 간격이 잘 드러나기 때문에 샘플이나 테스트 용으로 많이 사용되고 있다.   
+> 참조 : http://www.lipsum.com
 
 
 

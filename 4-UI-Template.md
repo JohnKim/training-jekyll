@@ -7,10 +7,5 @@
 * [http://jekyllthemes.org](http://jekyllthemes.org)
 * [http://jekyll.tips/templates](http://jekyll.tips/templates)
 
-이중에 하나를 검색해서 다운로드 받아 Github Pages 에 올려보도록 하겠습니다.
-
-많은 개발자들은 Github 을 통해 포트폴리오나 개발 이력 또는 기술 블로그를 Github Pages 를 통해 공유 하고 있습니다.  
-\(예, [https://biomadeira.github.io/sustain/](https://biomadeira.github.io/sustain/) \)
-
 
 
