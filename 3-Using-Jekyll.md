@@ -83,7 +83,6 @@ Layout 을 미리 개발해 놓은 후 각 웹페이지 템플릿 파일을 개�
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
   </head>
   <body>
