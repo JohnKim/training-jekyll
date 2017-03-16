@@ -141,7 +141,7 @@ fruit:
 </ul>
 ```
 
-이제 다시 `jekyll serve` 를 실행하고, [http://localhost:4000](http://localhost:4000) 에 접속하면, `_layouts/default.html` 의 `{{ content }}` 영역에 `index.html` 의 내용이 삽입되고 변수를 사용한 결과를 확인할 수 있습니다. 
+이제 다시 `jekyll serve` 를 실행하고, [http://localhost:4000](http://localhost:4000) 에 접속하면, `_layouts/default.html` 의 `{{ content }}` 영역에 `index.html` 의 내용이 삽입되고 변수를 사용한 결과를 확인할 수 있습니다.
 
 `_site` 폴더 안의 파일 내용을 통해 확인해 보도록 합니다.
 
