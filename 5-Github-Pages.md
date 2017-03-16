@@ -37,7 +37,7 @@ $ git checkout gh-pages
 _site
 ```
 
-\_site 폴더는 git 에 저장되어 관리될 필요가 없습니다. 개발자가 Jekyll 프로젝트를 git clone 으로 받아 직접 jekyll 명령어로 생성하면 되기 때문입니다. 이것은 JAVA 개발시 Maven 이나 Gradle 로 필요한 라이브러리를 다운받기 때문에 git 에 관리할 필요 없는 것과 마찬가지 입니다.
+`_site` 폴더는 git 에 저장되어 관리될 필요가 없습니다. 개발자가 Jekyll 프로젝트를 `git clone` 으로 받아 직접 jekyll 명령어로 생성하면 되기 때문입니다. 이것은 JAVA 개발시 Maven 이나 Gradle 로 필요한 라이브러리를 다운받기 때문에 git 에 관리할 필요 없는 것과 마찬가지 입니다.
 
 > `.gitignore`** 파일을 보다 쉽게 만드는 방법은?**
 >
@@ -64,11 +64,11 @@ Github 에서 실제로 정상적으로 업로드 되었는지 보고, `http://[
 baseurl: /training-github
 ```
 
-각 템플릿 파일에서 URL 링크가 있는 부분에 {{ site.baseurl }} 로 경로를 추가 하고, 다시 올려 확인합니다.
+각 템플릿 파일에서 URL 링크가 있는 부분에 `{{ site.baseurl }}` 로 경로를 추가 하고, 다시 올려 확인합니다.
 
 
 
-### **과제**
+### 과제
 
 그 외에도, `[본인계정].github.io`라는 이름으로 프로젝트 리파지토리를 생성하고 여기에 Jekyll 프로젝트를 저장하게 되면, 바로 `http://[본인계정].github.io/`에서 확인할 수 있습니다. \(반드시 master 에 생성해야 함\)
 
