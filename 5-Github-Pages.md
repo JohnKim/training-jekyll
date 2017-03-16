@@ -41,10 +41,10 @@ _site
 
 > `.gitignore`** 파일을 보다 쉽게 만드는 방법은?**
 >
-> 보통 프로젝트 리파지토리를 만들고 가장 먼저 하는 작업은 `.gitignore` 입니다. OS나 IDE 또는 에디터에 따라 다르고, 사용하는 개발언어에 따라서도 다릅니다.   
-> 좀더 쉽게 `.gitignore` 파일을 작성하기 위하여, 자동으로 생성하는 https://www.gitignore.io/ 사이트를 이용할 수 있습니다.
+> 보통 프로젝트 리파지토리를 만들고 가장 먼저 하는 작업은 `.gitignore` 입니다. OS나 IDE 또는 에디터에 따라 다르고, 사용하는 개발언어에 따라서도 다릅니다.  
+> 좀더 쉽게 `.gitignore` 파일을 작성하기 위하여, 자동으로 생성하는 [https://www.gitignore.io/](https://www.gitignore.io/) 사이트를 이용할 수 있습니다.
 
-
+Github Pages 는 내부적으로 Jekyll 기능을 포함하고 있으므로, `gh-pages` 에 업로드를 하면 자동으로 빌드되어  `_site` 폴더를 생성할 것입니다.
 
 이제 원격 저장소에 `git push` 명령을 통해 업로드 합니다.
 
@@ -53,6 +53,22 @@ $ git push origin gh-pages
 ```
 
 Github 에서 실제로 정상적으로 업로드 되었는지 보고, `http://[본인계정].github.io/training-github`를 통해 웹페이지에서 보이는지 확인합니다.
+
+
+
+일부 페이지에서는, 기본 URL 에 `/training-github` 이 포함되어 페이지를 못찾는 문제가 발생할 것입니다.
+
+`_config.yml` 파일에 우선 기본 URL이 설정된 변수를 추가 합니다.
+
+```
+baseurl: /training-github
+```
+
+각 템플릿 파일에서 URL 링크가 있는 부분에 {{ site.baseurl }} 로 경로를 추가 하고, 다시 올려 확인합니다.
+
+
+
+### **과제**
 
 그 외에도, `[본인계정].github.io`라는 이름으로 프로젝트 리파지토리를 생성하고 여기에 Jekyll 프로젝트를 저장하게 되면, 바로 `http://[본인계정].github.io/`에서 확인할 수 있습니다. \(반드시 master 에 생성해야 함\)
 

@@ -75,7 +75,7 @@ Layout 을 미리 개발해 놓은 후 각 웹페이지 템플릿 파일을 개�
 
 지금부터 개발하게 될 웹사이트는 전세계에서 가장 많이 사용되고 있는 웹 프레임워크인 Bootstrap 을 기반으로 개발하도록 합니다.
 
-> Bootstrap \(http://getbootstrap.com\)  
+> Bootstrap \([http://getbootstrap.com\](http://getbootstrap.com\)\)  
 > Bootstrap is **the most popular HTML, CSS, and JS framework** for developing responsive, mobile first projects on the web.
 
 `_layouts/default.html` 파일을 아래와 같이 생성합니다.
@@ -105,7 +105,7 @@ Layout 을 미리 개발해 놓은 후 각 웹페이지 템플릿 파일을 개�
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/posts.html">Posts</a></li>
             <li><a href="/about.html">About</a></li>
           </ul>
@@ -123,7 +123,6 @@ Layout 을 미리 개발해 놓은 후 각 웹페이지 템플릿 파일을 개�
 
   </body>
 </html>
-
 ```
 
 이 layout 파일을 사용하는 템플릿 페이지의 내용은 Jekyll 을 통해 빌드될 때 `{{ content }}` 영역에 들어가 HTML 로 변환되게 될 것입니다.  
@@ -158,7 +157,6 @@ fruit:
     {% endfor %}
   </ul>
 </p>
-
 ```
 
 이제 다시 `jekyll serve` 를 실행하고, [http://localhost:4000](http://localhost:4000) 에 접속하면, `_layouts/default.html` 의 `{{ content }}` 영역에 `index.html` 의 내용이 삽입되고 변수를 사용한 결과를 확인할 수 있습니다.
@@ -213,7 +211,6 @@ Proin ut nisl vestibulum, vestibulum sapien non, lobortis velit.
 Sed sodales, lorem et vulputate dignissim, felis dolor lobortis leo, id pretium magna libero non orci.
 
 Morbi interdum augue tellus, vel gravida sapien euismod vitae.
-
 ```
 
 파일명은 일반적으로 생성\(발행\) 일자와 제목으로 만들게 됩니다.
@@ -242,17 +239,17 @@ Jekyll 은 \_posts 폴더의 모든 파일 목록을 site.posts 를 통해 배�
 
 ```
 ├── _site
-│   ├── 2017
-│   │   └── 03
-│   │       ├── 16
-│   │       │   └── sample.html
-│   │       └── 17
-│   │           └── welcome-to-jekyll.html
-│   ├── index.html
-│   └── posts.html
+│   ├── 2017
+│   │   └── 03
+│   │       ├── 16
+│   │       │   └── sample.html
+│   │       └── 17
+│   │           └── welcome-to-jekyll.html
+│   ├── index.html
+│   └── posts.html
 ```
 
-[http://localhost:4000](http://localhost:4000) 에 접속하면 지금까지 개발한 사이트를 확인할 수 있습니다. 
+[http://localhost:4000](http://localhost:4000) 에 접속하면 지금까지 개발한 사이트를 확인할 수 있습니다.
 
 > 샘플로 만든  'Lorem ipsum dolor sit amet...' 문장은 사실상 특별한 의미가 없는 문장으로, 다양한 문자가 섞여 있고 문자의 조합에서 글자의 간격이 잘 드러나기 때문에 샘플이나 테스트 용으로 많이 사용되고 있다.  
 > 참조 : [http://www.lipsum.com](http://www.lipsum.com)
