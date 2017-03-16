@@ -7,5 +7,5 @@
 * [http://jekyllthemes.org](http://jekyllthemes.org)
 * [http://jekyll.tips/templates](http://jekyll.tips/templates)
 
-
+원하는 Theme 를 다운받아 그대로 또는 수정하여 사용할 수 있습니다.
 
