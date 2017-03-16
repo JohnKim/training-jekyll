@@ -2,8 +2,6 @@
 
 본 장에서는 `jekyll new` 를 사용하지 않고, 기본적으로 제공하는 UI 테마를 없이 직접 파일을 생성하여 처음부터 개발해보도록 합니다.
 
-내용과 예제는 [http://jekyll.tips](http://jekyll.tips) 에 있는 내용 중 기본적인 부분을 참조하여 작성되었습니다.
-
 Jekyll 기반의 웹사이트를 개발한 프로젝트 폴더를 생성합니다.
 
 ```
@@ -75,38 +73,57 @@ Layout 이란 개발해야 할 웹페이지마다 공통적으로 들어갈 **�
 
 Layout 을 미리 개발해 놓은 후 각 웹페이지 템플릿 파일을 개발하게 되면, 개발자는 모든 페이지에 공통 부분을 중복해서 개발하지 않아도 될 것입니다.
 
+지금부터 개발하게 될 웹사이트는 전세계에서 가장 많이 사용되고 있는 웹 프레임워크인 Bootstrap 을 기반으로 개발하도록 합니다.
+
+> Bootstrap \(http://getbootstrap.com\)  
+> Bootstrap is **the most popular HTML, CSS, and JS framework** for developing responsive, mobile first projects on the web.
+
 `_layouts/default.html` 파일을 아래와 같이 생성합니다.
 
 ```
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   </head>
+
   <body>
-    <header>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <nav class="main-nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/posts.html">Post</a></li>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">SAMPLE SITE</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/posts.html">Posts</a></li>
+            <li><a href="/about.html">About</a></li>
           </ul>
-        </nav>
-        <h1><a href="/"> <strong> Hello you guyz ^^; </strong></a></h1>
+        </div>
       </div>
-    </header>
-    <div class="content">
+    </nav>
+
+    <br/>
+
+    <div class="container">
       {{ content }}
     </div>
-    <footer>
-      <div class="container">
-        <p class="center-text"> <a href="http://cloudcannon.com">Created by Hacker</a></p>
-      </div>
-    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </body>
 </html>
+
 ```
 
 이 layout 파일을 사용하는 템플릿 페이지의 내용은 Jekyll 을 통해 빌드될 때 `{{ content }}` 영역에 들어가 HTML 로 변환되게 될 것입니다.  
@@ -131,13 +148,17 @@ fruit:
     cost: $1.50
     color: orange
 ---
-
-<h1> This is Sample Page </h1>
-<ul>
-  {% for item in page.fruit %}
+<div class="page-header">
+  <h1>Sticky footer with fixed navbar</h1>
+</div>
+<p>
+  <ul>
+    {% for item in page.fruit %}
     <li>{{ item.name }}, cost: {{ item.cost }}, color: {{ item.color }}</li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+</p>
+
 ```
 
 이제 다시 `jekyll serve` 를 실행하고, [http://localhost:4000](http://localhost:4000) 에 접속하면, `_layouts/default.html` 의 `{{ content }}` 영역에 `index.html` 의 내용이 삽입되고 변수를 사용한 결과를 확인할 수 있습니다.
@@ -179,23 +200,25 @@ Layout 은 페이지의 틀이나 배경이라고 한다면, Include 는 공통�
 layout: default
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Maecenas at tellus sed erat egestas dictum sed ac enim. 
-Fusce sollicitudin turpis nec urna egestas pellentesque. 
-Suspendisse ultricies ex vitae dui tempus dignissim. 
-Morbi sit amet dui molestie, aliquam urna id, rhoncus tellus. 
-Aliquam venenatis a velit in scelerisque. 
-Donec orci felis, feugiat eget ex sed, convallis sollicitudin dui. 
-Proin ut nisl vestibulum, vestibulum sapien non, lobortis velit. 
-Sed sodales, lorem et vulputate dignissim, felis dolor lobortis leo, id pretium magna libero non orci. 
-Morbi interdum augue tellus, vel gravida sapien euismod vitae. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Maecenas at tellus sed erat egestas dictum sed ac enim.
+Fusce sollicitudin turpis nec urna egestas pellentesque.
 
-{% include youtube.html youtube_id="8A2t_tAjMz8" %}
+Suspendisse ultricies ex vitae dui tempus dignissim.
+Morbi sit amet dui molestie, aliquam urna id, rhoncus tellus.
+Aliquam venenatis a velit in scelerisque.
+
+Donec orci felis, feugiat eget ex sed, convallis sollicitudin dui.
+Proin ut nisl vestibulum, vestibulum sapien non, lobortis velit.
+Sed sodales, lorem et vulputate dignissim, felis dolor lobortis leo, id pretium magna libero non orci.
+
+Morbi interdum augue tellus, vel gravida sapien euismod vitae.
+
 ```
 
 파일명은 일반적으로 생성\(발행\) 일자와 제목으로 만들게 됩니다.
 
-그리고, `_posts/2017-03-17-sample.md` 파일을 하나 더 만들어 글을 작성해 봅니다.
+그리고, `_posts/2017-03-16-sample.md` 파일을 하나 더 만들어 글을 작성해 봅니다.
 
 현재 두건의 글을 작성하였고 글 목록을 보여주는 페이지를 만들어 보도록 합니다.
 
@@ -218,8 +241,18 @@ Jekyll 은 \_posts 폴더의 모든 파일 목록을 site.posts 를 통해 배�
 `_site` 폴더 안의 구조를 보면, 작성한 파일들이 일자별 폴더와 함께 생성된 것을 확인할 수 있습니다.
 
 ```
-tree
+├── _site
+│   ├── 2017
+│   │   └── 03
+│   │       ├── 16
+│   │       │   └── sample.html
+│   │       └── 17
+│   │           └── welcome-to-jekyll.html
+│   ├── index.html
+│   └── posts.html
 ```
+
+[http://localhost:4000](http://localhost:4000) 에 접속하면 지금까지 개발한 사이트를 확인할 수 있습니다. 
 
 > 샘플로 만든  'Lorem ipsum dolor sit amet...' 문장은 사실상 특별한 의미가 없는 문장으로, 다양한 문자가 섞여 있고 문자의 조합에서 글자의 간격이 잘 드러나기 때문에 샘플이나 테스트 용으로 많이 사용되고 있다.  
 > 참조 : [http://www.lipsum.com](http://www.lipsum.com)
