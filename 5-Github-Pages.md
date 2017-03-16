@@ -8,7 +8,7 @@
 
 Github 은 프로젝트 저장소의 `gh-pages` 브랜치에 있는 파일을 URL 로 접속할 수 있도록 하고 있으며, Jekyll을 기본적으로 지원하고 있습니다.
 
-우선, 원격 리파지토리에 있는 프로젝트를 git clone 명령으로 PC 에 가져 옵니다.
+우선, 원격 리파지토리에 있는 프로젝트를 `git clone` 명령으로 PC 에 가져 옵니다. 이미 `git clone` 한 프로젝트가 있다면 이 단계는 그냥 넘어 갑니다.
 
 ```
 $ git clone https://github.com/[본인이생성한계정]/training-github.git
@@ -30,10 +30,26 @@ $ git checkout gh-pages
 
 그리고, 이전에 개발했던 Jekyll 프로젝트의 모든 파일을 옮겨 저장합니다.
 
-이제 원격 저장소에 git push 명령을 통해 업로드 합니다.
+원격 저장소에 이 모든 파일을 업로드 하기 전에 git 에 관리되지 않아야 하는 파일 또는 폴더를 설정해주는 `.gitignore` 파일을 생성합니다.  
+.`.gitignore` 파일 내용은 아래와 같습니다.
 
 ```
-git push origin gh-pages
+_site
+```
+
+\_site 폴더는 git 에 저장되어 관리될 필요가 없습니다. 개발자가 Jekyll 프로젝트를 git clone 으로 받아 직접 jekyll 명령어로 생성하면 되기 때문입니다. 이것은 JAVA 개발시 Maven 이나 Gradle 로 필요한 라이브러리를 다운받기 때문에 git 에 관리할 필요 없는 것과 마찬가지 입니다.
+
+> `.gitignore`** 파일을 보다 쉽게 만드는 방법은?**
+>
+> 보통 프로젝트 리파지토리를 만들고 가장 먼저 하는 작업은 `.gitignore` 입니다. OS나 IDE 또는 에디터에 따라 다르고, 사용하는 개발언어에 따라서도 다릅니다.   
+> 좀더 쉽게 `.gitignore` 파일을 작성하기 위하여, 자동으로 생성하는 https://www.gitignore.io/ 사이트를 이용할 수 있습니다.
+
+
+
+이제 원격 저장소에 `git push` 명령을 통해 업로드 합니다.
+
+```
+$ git push origin gh-pages
 ```
 
 Github 에서 실제로 정상적으로 업로드 되었는지 보고, `http://[본인계정].github.io/training-github`를 통해 웹페이지에서 보이는지 확인합니다.
