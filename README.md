@@ -1,6 +1,6 @@
-# &lt;2주&gt; Jekyll 사용하기 실습
+# &lt;1주&gt; \(실습 및 과제\) Jekyll 사용하기 실습
 
-강의 일시 : 2017.03.17\(금\) 오전 9시 ~ 12시
+강의 일시 : 2018.03.06\(화\) 오후 4시 ~
 
 본 과정은 수강생이 직접 따라하면서 Jekyll 의 기본적인 사용법과 Github Pages 를 활용하여 서비스 하는 실습 자료입니다.
 
@@ -17,8 +17,7 @@
    * Windows : [https://jekyllrb.com/docs/windows/\#installation](https://jekyllrb.com/docs/windows/#installation)  
    * Ubuntu : [https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jekyll-development-site-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jekyll-development-site-on-ubuntu-16-04)
 
-  
-   설치가 완료되었다면, 아래와 같이 설치된 Jekyll 의 버젼을 확인해볼 수 있습니다. 
+설치가 완료되었다면, 아래와 같이 설치된 Jekyll 의 버젼을 확인해볼 수 있습니다.
 
 ```
 $ jekyll -v
