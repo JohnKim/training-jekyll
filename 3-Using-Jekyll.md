@@ -75,7 +75,7 @@ Layout 을 미리 개발해 놓은 후 각 웹페이지 템플릿 파일을 개�
 
 지금부터 개발하게 될 웹사이트는 전세계에서 가장 많이 사용되고 있는 웹 프레임워크인 Bootstrap 을 기반으로 개발하도록 합니다.
 
-> Bootstrap \([http://getbootstrap.com\](http://getbootstrap.com\)\)  
+> Bootstrap \([http://getbootstrap.com\](http://getbootstrap.com%29\)  
 > Bootstrap is **the most popular HTML, CSS, and JS framework** for developing responsive, mobile first projects on the web.
 
 `_layouts/default.html` 파일을 아래와 같이 생성합니다.
